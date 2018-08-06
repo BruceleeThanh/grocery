@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/size80"
+        android:background="@drawable/radius_edt"
+        android:orientation="vertical">
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size15"
+            android:text="@string/send_notifi"
+            android:textColor="@color/colorApp"
+            android:textSize="@dimen/size_text_25" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layout_bottom"
+                android:layout_marginEnd="@dimen/size15"
+                android:layout_marginStart="@dimen/size15"
+                android:background="@color/colorWhite">
+
+                <ProgressBar
+                    android:id="@+id/progressBarMain"
+                    android:layout_width="@dimen/size80"
+                    android:layout_height="@dimen/size80"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/progress_animation"
+                    android:visibility="invisible" />
+
+                <com.grocery.common.CRecyclerView
+                    android:id="@+id/lv_product"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/size20"
+                android:layout_marginTop="@dimen/size20"
+                android:gravity="center">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="@dimen/size160"
+                    android:layout_height="@dimen/size48"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/size12"
+                    android:background="@drawable/bg_canceled_orders"
+                    android:gravity="center"
+                    android:text="@string/canceled"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/size_text_18" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvSend"
+                    android:layout_width="@dimen/size160"
+                    android:layout_height="@dimen/size48"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_open_again_shop"
+                    android:gravity="center"
+                    android:text="@string/send"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_text_18" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

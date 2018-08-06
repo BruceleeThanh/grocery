@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:background="@color/color_bg_F9"
+        android:orientation="vertical"
+        android:padding="@dimen/size15">
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:text="@string/category_name"
+            android:textColor="#000"
+            android:textSize="@dimen/size_text_18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_weight="1.3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.grocery.common.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size15"
+                    android:background="@drawable/radius_list"
+                    android:hint="@string/enter_category_name"
+                    android:imeOptions="actionDone"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/im_add_suggest_manage_category"
+                    android:padding="@dimen/size12"
+                    android:textColor="@color/text_save"
+                    android:textSize="@dimen/size_text_16" />
+
+                <ImageView
+                    android:id="@+id/im_add_suggest_manage_category"
+                    android:layout_width="@dimen/size80"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/size50"
+                    android:layout_margin="@dimen/size5"
+                    android:background="@drawable/btn_open_again_shop"
+                    android:padding="@dimen/size15"
+                    android:src="@mipmap/icon_add" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:background="@color/colorApp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_divider"
+            android:background="@color/color_bg_F9"
+            android:padding="@dimen/size10">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/btn_suggest_products"
+                android:layout_width="@dimen/size180"
+                android:layout_height="@dimen/size50"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_open_again_shop"
+                android:gravity="center"
+                android:text="@string/suggest_category"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_18" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

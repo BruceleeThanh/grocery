@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_new_orders"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/render"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="19">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/textView13"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="2"
+            android:background="@color/back_list"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/order_Id"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="1.2"
+            android:background="@color/back_list"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/falt_no"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="3.8"
+            android:background="@color/back_list"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/buildin_name"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="4">
+
+            <com.grocery.common.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/back_list"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size1"
+                android:text="@string/time_orders"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_17" />
+
+            <com.grocery.common.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="@dimen/size1"
+                android:background="@color/back_list"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size10"
+                android:text="@string/remaining_time"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_17" />
+
+        </LinearLayout>
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="2"
+            android:background="@color/back_list"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/deliver_before"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_weight="2"
+            android:background="@color/back_list"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/Customer_name"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:layout_margin="@dimen/size1"
+            android:gravity="center_vertical"
+            android:background="@color/back_list"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/Amount"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <ProgressBar
+            android:id="@+id/progressBarMain"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size80"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progress_animation"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.grocery.common.CRecyclerView
+                    android:id="@+id/lv_new_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

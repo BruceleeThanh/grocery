@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/size10"
+    android:layout_marginTop="@dimen/size10"
+    android:background="@drawable/radius_list"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/size85"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size30"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/progress_animation" />
+
+            <com.grocery.common.RoundRectCornerImageView
+                android:id="@+id/imAvata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/size5">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/aed_item_my_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="5.00  jjfdgjj kfdkgk kfdkgkf kfdkgfkdg kfdkgfdk kfdgkfdk "
+                android:textColor="@color/colorApp"
+                android:textSize="@dimen/size_text_14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.grocery.common.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/QTE"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/size_text_14" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/qte_item_my_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size5"
+                    android:ellipsize="marquee"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="3"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="@dimen/size_text_14" />
+            </LinearLayout>
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/weight_item_my_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size10"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="600"
+                android:textSize="@dimen/size_text_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/note_item_my_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:padding="@dimen/size5"
+        android:singleLine="true"
+        android:text="@string/l_usine"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_text_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/size10"
+        android:layout_marginLeft="@dimen/size5"
+        android:layout_marginRight="@dimen/size5"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <com.grocery.common.SwitchView
+                android:id="@+id/switchStatus"
+                android:layout_width="@dimen/size48"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:color_off="@color/color_Mon"
+                app:color_on="@color/colorApp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size5"
+            android:layout_marginRight="@dimen/size5"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/im_item_my_stock_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size30"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_open_again_shop"
+                android:padding="@dimen/size5"
+                android:src="@mipmap/icon_pen" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/im_item_my_stock_ring"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size30"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_rings"
+                android:padding="@dimen/size5"
+                android:src="@mipmap/icon_rings_2" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

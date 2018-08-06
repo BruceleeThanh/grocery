@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size10"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/size8"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size10"
+            android:layout_marginTop="@dimen/size10"
+            android:gravity="center_vertical"
+            android:background="@color/back_list"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="@dimen/size120"
+                android:layout_height="@dimen/size80" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/size30"
+                android:paddingStart="@dimen/size15">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size15"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tv_name_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Customer_name"
+                        android:textColor="@color/colorGreen4"
+                        android:textSize="@dimen/size_text_15" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tv_price_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size15"
+                        android:text="@string/Customer_name"
+                        android:textColor="@color/colorBg"
+                        android:textSize="@dimen/size_text_15" />
+                </LinearLayout>
+
+                <com.grocery.common.CustomEditText
+                    android:id="@+id/edt_message_notification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:layout_marginTop="@dimen/size5"
+                    android:layout_marginBottom="@dimen/size5"
+                    android:background="@color/colorWhite"
+                    android:padding="@dimen/size10"
+                    android:hint="@string/enter_message"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_15" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="@dimen/size30"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_close" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

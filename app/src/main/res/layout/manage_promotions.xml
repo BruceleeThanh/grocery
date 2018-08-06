@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_current_promotions"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:text="@string/current_promations"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_20" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_create_promotion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:text="@string/create_promotion"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/layout_line_current_promotions"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_create_promotion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/list_fragment_manager_promotions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

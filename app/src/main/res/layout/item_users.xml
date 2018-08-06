@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/size10"
+        android:paddingTop="@dimen/size10">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_no"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:singleLine="true"
+            android:text="@string/sl_no"
+            android:textColor="#000"
+            android:textSize="@dimen/size_text_16" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/im_item_users"
+                android:layout_width="@dimen/size50"
+                android:layout_height="@dimen/size50"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_name_item_users"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:singleLine="true"
+            android:text="@string/Customer_name"
+            android:textColor="#000"
+            android:textSize="@dimen/size_text_16" />
+
+        <com.grocery.common.CustomTextviewBold
+            android:id="@+id/tv_flat_item_users"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingBottom="@dimen/size5"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="@string/falt_no"
+            android:textColor="#000"
+            android:textSize="@dimen/size_text_16" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_building_item_users"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size5"
+                android:layout_toLeftOf="@+id/layout_view_item_user"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size10"
+                android:singleLine="true"
+                android:text="@string/buildin_name"
+                android:textColor="#000"
+                android:textSize="@dimen/size_text_17" />
+
+            <LinearLayout
+                android:id="@+id/layout_view_item_user"
+                android:layout_width="@dimen/size90"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_open_again_shop"
+                android:paddingLeft="@dimen/size10">
+
+                <include layout="@layout/button_view" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/back_list" />
+</LinearLayout>

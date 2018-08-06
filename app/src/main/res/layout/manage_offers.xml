@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_manager_offers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_live_manager_offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:text="@string/live_customer"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_20" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_regular_manager_offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:text="@string/regular_offer"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_20" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_combo_manager_offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:text="@string/combo_offer"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/layout_line_live_customer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_regular_offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_combo_offer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/list_fragment_manager_offers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

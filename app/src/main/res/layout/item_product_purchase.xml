@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingBottom="@dimen/size1"
+    android:background="@color/back_list">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:id="@+id/tvId"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size12"
+            android:text="@string/no"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/tvName"
+            android:gravity="center|left"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:paddingLeft="@dimen/size12"
+            android:text="@string/product"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size12"
+            android:singleLine="true"
+            android:text="@string/of_orders"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/checkBox"
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size30"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/size5"
+                android:background="@drawable/customs_cb"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

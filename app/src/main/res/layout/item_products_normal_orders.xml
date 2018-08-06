@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size100"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/contentImage"
+            android:layout_width="@dimen/size130"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/render_gray_right">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size30"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:indeterminateDrawable="@drawable/progress_animation" />
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="5dp"
+                app:riv_corner_radius_bottom_left="5dp"
+                app:riv_corner_radius_top_left="5dp" />
+            <!--<com.grocery.common.RoundRectCornerImageView-->
+            <!--android:id="@+id/imProducts"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="centerCrop" />-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/contentImage"
+            android:background="@drawable/render_gray_right"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size10">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.2">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/nameProductsOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:maxLines="2"
+                    android:text="No Name"
+                    android:textColor="@color/today_total"
+                    android:textSize="@dimen/size_text_14" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/UnitProductsOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/nameProductsOrders"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/size5"
+                    android:ellipsize="marquee"
+                    android:paddingTop="@dimen/size5"
+                    android:text="600 gm"
+                    android:textColor="@color/colorBlackTrans60"
+                    android:textSize="@dimen/size_text_12" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/AEDxUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameProductsOrders"
+                    android:layout_marginLeft="@dimen/size30"
+                    android:layout_toRightOf="@id/UnitProductsOrder"
+                    android:ellipsize="marquee"
+                    android:paddingTop="@dimen/size5"
+                    android:text="AED 5.00 X 5 Unit"
+                    android:textColor="@color/despatched_orders"
+                    android:textSize="@dimen/size_text_12" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/Alternavite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/UnitProductsOrder"
+                    android:layout_marginLeft="@dimen/size5"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@drawable/btn_alternavite"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingRight="@dimen/size10"
+                    android:text="@string/Alternative"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_text_14" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvSelected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/UnitProductsOrder"
+                    android:layout_marginLeft="@dimen/size5"
+                    android:layout_marginTop="@dimen/size15"
+                    android:layout_toRightOf="@+id/Alternavite"
+                    android:background="@drawable/btn_alternavite"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingRight="@dimen/size10"
+                    android:text="2 selected"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_14"
+                    android:visibility="invisible" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/UnitProductsOrder"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="marquee"
+                    android:text="5.00"
+                    android:textColor="@color/bulk_orders"
+                    android:textSize="@dimen/size_text_12" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvAvlQTY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvTotal"
+                    android:ellipsize="marquee"
+                    android:paddingTop="@dimen/size10"
+                    android:text="15 unit"
+                    android:textColor="@color/colorBlackTrans60"
+                    android:textSize="@dimen/size_text_12" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_weight="1.5">
+
+                <LinearLayout
+                    android:id="@+id/layoutDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/discount1"
+                        android:textColor="@color/today_total"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_text_15"
+                        android:layout_marginTop="@dimen/size3"
+                        android:background="@drawable/radius_edt"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/size3"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size5"
+                        android:paddingTop="@dimen/size3"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlackTrans60"
+                        android:textSize="@dimen/size_text_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutQTY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_toLeftOf="@+id/layoutDiscount"
+                    android:orientation="vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/QTY"
+                        android:textColor="@color/today_total"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvQTY"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_text_15"
+                        android:layout_marginTop="@dimen/size3"
+                        android:background="@drawable/radius_edt"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/size3"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size5"
+                        android:paddingTop="@dimen/size3"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlackTrans60"
+                        android:textSize="@dimen/size_text_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_toLeftOf="@id/layoutQTY"
+                    android:orientation="vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/weight"
+                        android:textColor="@color/today_total"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_text_15"
+                        android:layout_marginTop="@dimen/size3"
+                        android:background="@drawable/radius_edt"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/size3"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size5"
+                        android:paddingTop="@dimen/size3"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlackTrans60"
+                        android:textSize="@dimen/size_text_12" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imClose"
+        android:layout_width="@dimen/size30"
+        android:layout_height="@dimen/size30"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="@dimen/size10"
+        android:paddingLeft="@dimen/size10"
+        android:src="@mipmap/icon_close_2" />
+</RelativeLayout>

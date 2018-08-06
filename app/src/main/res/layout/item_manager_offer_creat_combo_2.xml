@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/size10"
+    android:layout_marginTop="@dimen/size10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size10"
+        android:background="@drawable/radius_edt"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layoutImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size85"
+                android:layout_weight="1">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/size30"
+                    android:layout_height="@dimen/size30"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:indeterminateDrawable="@drawable/progress_animation" />
+
+                <com.grocery.common.RoundRectCornerImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_toRightOf="@+id/layoutImage"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/size10">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/aed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:text="5.00"
+                    android:textColor="@color/colorApp"
+                    android:textSize="@dimen/size_text_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:orientation="horizontal">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/QTE"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/qte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:gravity="center|left"
+                        android:text="3"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="@dimen/size_text_14" />
+                </LinearLayout>
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/untils"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size10"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="600"
+                    android:textSize="@dimen/size_text_14" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/size5"
+            android:text="@string/l_usine"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_text_15" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_close"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/icon_close_2" />
+</RelativeLayout>

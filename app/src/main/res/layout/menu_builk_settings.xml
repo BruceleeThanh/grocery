@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size20">
+
+        <com.grocery.common.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/please_specify"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_22" />
+
+        <LinearLayout
+            android:id="@+id/layout_rd1_bulk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size80"
+            android:layout_marginTop="@dimen/size12"
+            android:background="#fff"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/size1"
+            android:paddingLeft="@dimen/size_text_10">
+
+            <LinearLayout
+                android:id="@+id/rd_also_recive"
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size30"
+                android:background="@drawable/customs_radio_btn"
+                android:orientation="horizontal" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_also_receive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size20"
+                android:text="@string/also_recive"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_19" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size80"
+            android:background="@color/back_tb"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/size1">
+
+            <LinearLayout
+                android:id="@+id/layout_rd2_bulk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size10">
+
+                <LinearLayout
+                    android:id="@+id/rd_only_recive"
+                    android:layout_width="@dimen/size30"
+                    android:layout_height="@dimen/size30"
+                    android:background="@drawable/customs_radio_btn"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tv_only_receive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/size20"
+                    android:text="@string/only_recive"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_19" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/back_list">
+
+        <LinearLayout
+            android:id="@+id/line_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:background="@color/colorApp"
+            android:orientation="horizontal" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/btn_save_update_setting"
+            android:layout_width="@dimen/size180"
+            android:layout_height="@dimen/size55"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line_layout"
+            android:layout_margin="@dimen/size10"
+            android:background="@drawable/btn_save"
+            android:gravity="center"
+            android:text="Save Update"
+            android:textColor="@color/text_save"
+            android:textSize="@dimen/size_text_21" />
+    </RelativeLayout>
+
+</RelativeLayout>

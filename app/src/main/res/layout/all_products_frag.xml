@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_all_products"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/size10"
+            android:weightSum="5">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_pro_manage_category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size8"
+                android:paddingTop="@dimen/size8"
+                android:text="@string/manage_category"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_18" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_pro_sub_category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_weight="1.1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size8"
+                android:paddingTop="@dimen/size8"
+                android:text="@string/manage_sut"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_18" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_pro_manage_brands"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size8"
+                android:paddingTop="@dimen/size8"
+                android:text="@string/manage_brands"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_18" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_pro_manage_products"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_list_frag"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size8"
+                android:paddingTop="@dimen/size8"
+                android:text="@string/manage_products"
+                android:textColor="#fff"
+                android:textSize="@dimen/size_text_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/layout_line_manage_category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_sub_category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_manage_brands"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/layout_line_manage_products"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorApp"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/products_list_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite" />
+</LinearLayout>

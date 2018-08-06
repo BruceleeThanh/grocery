@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_list_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBgPurpleCoal">
+
+        <com.grocery.common.CRecyclerView
+            android:id="@+id/lvMenu2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/imCloseMenu"
+            android:layout_marginLeft="@dimen/size40"
+            android:layout_marginTop="@dimen/size40"
+            android:layout_marginRight="@dimen/size100"
+            android:layout_marginBottom="@dimen/size40"
+            android:numColumns="3"/>
+
+        <ImageView
+            android:id="@+id/imCloseMenu"
+            android:layout_width="@dimen/size70"
+            android:layout_height="@dimen/size70"
+            android:layout_marginTop="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/button_close" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_fragment_menu"
+        layout="@layout/menu_list"
+        android:visibility="invisible"/>
+</FrameLayout>

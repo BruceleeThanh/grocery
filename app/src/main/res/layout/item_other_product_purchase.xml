@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/back_list">
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/size10"
+        android:layout_toStartOf="@+id/checkBox"
+        android:ellipsize="marquee"
+        android:gravity="center|left"
+        android:singleLine="true"
+        android:text="@string/no"
+        android:textColor="@color/text_spiner"
+        android:textSize="@dimen/size_text_14" />
+
+    <LinearLayout
+        android:id="@+id/checkBox"
+        android:layout_width="@dimen/size25"
+        android:layout_height="@dimen/size25"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/size5"
+        android:background="@drawable/customs_cb"
+        android:orientation="horizontal" />
+</RelativeLayout>

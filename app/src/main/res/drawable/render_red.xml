@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_pressed="true">
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="@dimen/size2"
+                android:color="#890a0a"></stroke>
+            <corners android:radius="@dimen/size5"></corners>
+            <solid android:color="#3d24658b"></solid>
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="rectangle">
+            <stroke android:width="@dimen/size2"
+                android:color="@color/canceled_orders"></stroke>
+            <corners android:radius="@dimen/size5"></corners>
+
+        </shape>
+    </item>
+</selector>

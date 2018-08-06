@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/size10"
+        android:paddingTop="@dimen/size10">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/idBrand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/tb_ID"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_16" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/NameBrand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="@string/brand_name"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_16" />
+
+        <RelativeLayout
+            android:id="@+id/layout_sort_manager_brand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite">
+
+            <ImageView
+                android:id="@+id/imCheckBox"
+                android:layout_width="@dimen/size32"
+                android:layout_height="@dimen/size32"
+                android:layout_centerInParent="true"
+                android:src="@drawable/check_box_2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBlackTrans20" />
+
+</LinearLayout>

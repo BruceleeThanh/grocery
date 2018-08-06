@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_search_main"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size70"
+    android:gravity="center_vertical"
+    android:background="@drawable/btn_open_again_shop_left"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/im_hide_layout_search"
+        android:layout_width="@dimen/size30"
+        android:layout_height="@dimen/size40"
+        android:layout_margin="@dimen/size10"
+        android:background="@mipmap/icon_right_button" />
+
+    <LinearLayout
+        android:id="@+id/layout_radio_flat_number_search"
+        android:layout_width="@dimen/size80"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size5"
+        android:layout_marginLeft="@dimen/size10"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size5"
+        android:background="@drawable/render_search_2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rd_flat_search"
+            android:layout_width="@dimen/size25"
+            android:layout_height="@dimen/size25"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size3"
+            android:background="@drawable/customs_radio_btn_search"
+            android:orientation="vertical"/>
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_flat_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/flat_number"
+            android:layout_marginTop="@dimen/size3"
+            android:textColor="@color/text_search_main"
+            android:textSize="@dimen/size_text_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_radio_order_id_search"
+        android:layout_width="@dimen/size80"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size5"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginTop="@dimen/size5"
+        android:background="@drawable/render_search_2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/rd_order_id_search"
+            android:layout_width="@dimen/size25"
+            android:layout_height="@dimen/size25"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size3"
+            android:background="@drawable/customs_radio_btn_search"
+            android:orientation="horizontal"/>
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_order_id_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/order_Id"
+            android:layout_marginTop="@dimen/size3"
+            android:textColor="@color/text_search_main"
+            android:textSize="@dimen/size_text_12" />
+    </LinearLayout>
+
+    <com.grocery.common.CustomEditText
+        android:id="@+id/edtSearch"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size8"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginBottom="@dimen/size8"
+        android:background="@drawable/radius_list"
+        android:ellipsize="end"
+        android:enabled="false"
+        android:gravity="center|left"
+        android:hint="@string/enter_flat_number"
+        android:imeOptions="actionDone"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="@dimen/size_text_17" />
+
+    <LinearLayout
+        android:id="@+id/btnSearch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/size8">
+
+        <include layout="@layout/button_search_2" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size200"
+    android:orientation="vertical"
+    android:padding="@dimen/size10">
+
+    <LinearLayout
+        android:id="@+id/layout_item_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/bg_newoders"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.grocery.common.CustomTextviewBold
+            android:id="@+id/tvNumberOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_text_10"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_38" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_text_item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/orders"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_20" />
+    </LinearLayout>
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/tv_notifi"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/size10"
+        android:background="@mipmap/icon_notifi"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="#fff"
+        android:textSize="@dimen/size_text_21"
+        android:visibility="invisible" />
+
+</RelativeLayout>

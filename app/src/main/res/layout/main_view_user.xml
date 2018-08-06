@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/size1"
+        android:layout_weight="1"
+        android:background="@color/color_bg_EF"
+        android:orientation="horizontal"
+        android:weightSum="15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75">
+
+            <ImageView
+                android:id="@+id/imMenuViewUser"
+                android:layout_width="@dimen/size40"
+                android:layout_height="@dimen/size40"
+                android:layout_gravity="center|left"
+                android:layout_margin="@dimen/size10"
+                android:src="@mipmap/icon_back" />
+        </LinearLayout>
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_main_name_view_users"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.25"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/size5"
+            android:text="@string/dashbroad"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_21" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_main_time_view_user"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="left|center"
+                android:paddingRight="@dimen/size15"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_21" />
+
+            <ImageView
+                android:id="@+id/imageViewclock"
+                android:layout_width="@dimen/size50"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_toLeftOf="@+id/tv_main_time_view_user"
+                android:padding="@dimen/size5"
+                android:src="@mipmap/icon_clock" />
+
+            <LinearLayout
+                android:id="@+id/layout_space_menu"
+                android:layout_width="@dimen/size50"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imageViewclock"
+                android:orientation="horizontal"></LinearLayout>
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_home_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/layout_space_menu"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:text="@string/home"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_21" />
+
+            <ImageView
+                android:id="@+id/im_home"
+                android:layout_width="@dimen/size50"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|right"
+                android:layout_toLeftOf="@+id/tv_home_menu"
+                android:layout_weight="1"
+                android:padding="@dimen/size5"
+                android:src="@mipmap/icon_home" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/list_fragment_view_user"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/headerButtonTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:layout_marginTop="@dimen/size5"
+                    android:orientation="horizontal">
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tv_view_user_orders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size10"
+                        android:background="@drawable/bg_list_frag"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/size5"
+                        android:paddingLeft="@dimen/size10"
+                        android:paddingRight="@dimen/size10"
+                        android:paddingTop="@dimen/size5"
+                        android:text="@string/orders_history"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/size_text_20" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tv_view_user_purchase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size10"
+                        android:background="@drawable/bg_list_frag"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/size5"
+                        android:paddingLeft="@dimen/size10"
+                        android:paddingRight="@dimen/size10"
+                        android:paddingTop="@dimen/size5"
+                        android:text="@string/user_purchase"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/size_text_20" />
+                </LinearLayout>
+
+                <!-- line bottom -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/headerButtonTop"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/layout_line_order_his"
+                        android:layout_width="@dimen/width_view_user_order_history_line"
+                        android:layout_height="@dimen/size1"
+                        android:background="@color/colorApp" />
+
+                    <View
+                        android:id="@+id/layout_line_usre_pur"
+                        android:layout_width="@dimen/width_view_user_purchase_analytic_line"
+                        android:layout_height="@dimen/size1"
+                        android:background="@color/colorApp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size1"
+                        android:background="@color/colorApp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

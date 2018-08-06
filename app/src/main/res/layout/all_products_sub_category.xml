@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/back_list"
+            android:padding="@dimen/size10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size15"
+                android:layout_toLeftOf="@+id/im_search_sub_category"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/size30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size10"
+                        android:text="@string/choose_category"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_15" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radius_edt">
+
+                        <Spinner
+                            android:id="@+id/spn_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@null" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size18"
+                            android:layout_height="@dimen/size18"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/size10"
+                            android:src="@mipmap/icon_taget_down" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/size10"
+                        android:text="@string/search_sub"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_15" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radius_edt">
+
+                        <Spinner
+                            android:id="@+id/spn_sub_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@null" />
+
+                        <ImageView
+                            android:layout_width="@dimen/size18"
+                            android:layout_height="@dimen/size18"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/size10"
+                            android:src="@mipmap/icon_taget_down" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/im_search_sub_category"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size42"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_open_again_shop"
+                android:padding="@dimen/size10"
+                android:src="@mipmap/icon_search" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/render"
+                android:orientation="horizontal">
+
+                <com.grocery.common.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/size1"
+                    android:layout_weight="1"
+                    android:background="@color/back_list"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/size10"
+                    android:text="@string/tb_ID"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_15" />
+
+                <com.grocery.common.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/size1"
+                    android:layout_weight="2"
+                    android:background="@color/back_list"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/size10"
+                    android:text="@string/category"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_15" />
+
+                <com.grocery.common.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/size1"
+                    android:layout_weight="4"
+                    android:background="@color/back_list"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/size10"
+                    android:text="@string/sub_category"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_15" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutSort"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size1"
+                    android:layout_weight="1"
+                    android:background="@color/back_list"
+                    android:paddingBottom="@dimen/size3"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingRight="@dimen/size10"
+                    android:paddingTop="@dimen/size3">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size5"
+                        android:layout_toLeftOf="@+id/im_sort_sub_category"
+                        android:gravity="center"
+                        android:text="@string/add_to_your_list"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_15" />
+
+                    <ImageView
+                        android:id="@+id/im_sort_sub_category"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/icon_sort" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7">
+
+                <RelativeLayout
+                    android:id="@+id/layout_sort"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size80"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/bg_list_frag"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/layout_item_sort"
+                        android:layout_width="@dimen/size700"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/size10"
+                        android:layout_marginLeft="@dimen/size30"
+                        android:layout_marginTop="@dimen/size10"
+                        android:background="@drawable/radius_edt"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/size10"
+                        android:weightSum="19">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/size10"
+                            android:layout_weight="1"
+                            android:background="@mipmap/icon_sort_bg" />
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/textView24"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center|left"
+                            android:text="@string/sort_by"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/size_text_18" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.grocery.common.CustomCheckBox
+                                android:id="@+id/cbAdded"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/tvAdded"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center|left"
+                            android:paddingLeft="@dimen/size5"
+                            android:text="@string/add"
+                            android:textColor="@color/text_save"
+                            android:textSize="@dimen/size_text_16" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.grocery.common.CustomCheckBox
+                                android:id="@+id/cbNotAdd"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/tvNotAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:gravity="center|left"
+                            android:paddingLeft="@dimen/size5"
+                            android:text="@string/not_add"
+                            android:textColor="@color/text_save"
+                            android:textSize="@dimen/size_text_16" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.grocery.common.CustomCheckBox
+                                android:id="@+id/cbRecently"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/tvRecently"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center|left"
+                            android:paddingLeft="@dimen/size5"
+                            android:text="@string/recently_added"
+                            android:textColor="@color/text_save"
+                            android:textSize="@dimen/size_text_16" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:paddingLeft="@dimen/size10">
+
+                            <com.grocery.common.CustomTextView
+                                android:id="@+id/btnSubmit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/size5"
+                                android:background="@drawable/btn_open_again_shop"
+                                android:gravity="center"
+                                android:text="@string/submit"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/size_text_20" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/icon_close_sort_sub_category"
+                        android:layout_width="@dimen/size40"
+                        android:layout_height="@dimen/size40"
+                        android:background="@mipmap/icon_close" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layout_sort"
+                    android:background="@color/colorWhite">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarMain"
+                        android:layout_width="@dimen/size80"
+                        android:layout_height="@dimen/size80"
+                        android:layout_centerInParent="true"
+                        android:indeterminateDrawable="@drawable/progress_animation"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v4.widget.SwipeRefreshLayout
+                            android:id="@+id/swiperefresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.grocery.common.CRecyclerView
+                                android:id="@+id/listSubCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorWhite" />
+                        </android.support.v4.widget.SwipeRefreshLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorApp" />
+
+        <include layout="@layout/item_title_save" />
+    </LinearLayout>
+</RelativeLayout>

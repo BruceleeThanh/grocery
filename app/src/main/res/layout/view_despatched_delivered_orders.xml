@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/today_total"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header_view_order"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size15"
+            android:layout_weight="2"
+            android:background="@drawable/radius_edt"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:padding="@dimen/size10">
+
+                <com.grocery.common.CustomTextviewBold
+                    android:id="@+id/tvOrderName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:textColor="@color/bulk_orders"
+                    android:textSize="@dimen/size_text_18" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvTimeDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center|left"
+                    android:paddingTop="@dimen/size5"
+                    android:singleLine="true"
+                    android:textColor="@color/bulk_orders"
+                    android:textSize="@dimen/size_text_16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/size5">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_by"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvDeliveryBoyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:paddingLeft="@dimen/size10"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingTop="@dimen/size10">
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/total_amount"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/discount"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/redeemed_Amt"
+                        android:textColor="@color/canceled_orders"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/net_amount"
+                        android:textColor="@color/color_Fri"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingRight="@dimen/size10"
+                    android:paddingTop="@dimen/size10">
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvTotalAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:paddingLeft="@dimen/size10"
+                        android:singleLine="true"
+                        android:text="AED: 211.00"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="AED: 211.00"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/redeemendAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="AED: 211.00"
+                        android:textColor="@color/canceled_orders"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/Amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="AED: 211.00"
+                        android:textColor="@color/color_Fri"
+                        android:textSize="@dimen/size_text_14" />
+
+                    <com.grocery.common.CustomTextView
+                        android:id="@+id/tvPaymentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/text_spiner"
+                        android:textSize="@dimen/size_text_14" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radius_edt">
+
+            <fragment
+                android:id="@+id/fragment_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/viewMap"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size30"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/size1"
+                android:background="@drawable/btn_view_map"
+                android:gravity="center"
+                android:text="@string/view"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_text_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Content bellow -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTop"
+        android:orientation="horizontal">
+        <!-- Right content -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/size_text_15"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_weight="2"
+            android:background="@drawable/radius_edt"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/size2"
+                android:id="@+id/topHeaderInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.grocery.common.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/size15"
+                    android:text="@string/products"
+                    android:textColor="@color/bg_search_main"
+                    android:textSize="@dimen/size_text_16" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/size10"
+                    android:text="ABCSADASD"
+                    android:textColor="@color/canceled_orders"
+                    android:textSize="@dimen/size_text_16" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/orderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/tvOrderId"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/size10"
+                    android:text="@string/order_Id_1"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_16" />
+            </RelativeLayout>
+
+            <com.grocery.common.CRecyclerView
+                android:id="@+id/listProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/navigatorBottomBar"
+                android:layout_below="@+id/topHeaderInfo"
+                android:orientation="horizontal"/>
+
+            <RelativeLayout
+                android:paddingTop="@dimen/size3"
+                android:paddingBottom="@dimen/size3"
+                android:id="@+id/navigatorBottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:background="#0788a4"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_text_15">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/numberOfItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="@string/number_of_item"
+                            android:textColor="@color/colorWhite" />
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/tvNumberItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:paddingLeft="@dimen/size10"
+                            android:text="0"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/removedProducts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="@string/removed_products"
+                            android:textColor="@color/color_Fri" />
+
+
+                        <com.grocery.common.CustomTextView
+                            android:id="@+id/tvNumberItemDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:paddingLeft="@dimen/size10"
+                            android:text="0"
+                            android:textColor="@color/color_Fri" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/size8"
+                    android:paddingTop="@dimen/size8">
+
+                    <ImageView
+                        android:id="@+id/btnUp3"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@mipmap/icon_up_32" />
+
+
+                    <ImageView
+                        android:id="@+id/btnUp2"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@mipmap/icon_up_22" />
+
+
+                    <ImageView
+                        android:id="@+id/btnUp1"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@mipmap/icon_up_11" />
+
+
+                    <ImageView
+                        android:id="@+id/btnDown1"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@drawable/btn_down_11" />
+
+
+                    <ImageView
+                        android:id="@+id/btnDown2"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@drawable/btn_down_12" />
+
+
+                    <ImageView
+                        android:id="@+id/btnDown3"
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/size5"
+                        android:src="@drawable/btn_down_13" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- left content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="@dimen/size10"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutBulk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:background="@drawable/radius_edt"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/size5"
+                android:paddingTop="@dimen/size8">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvPrev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_next_order"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/size5"
+                    android:paddingTop="@dimen/size5"
+                    android:text="@string/prev_order"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_text_16" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_next_order"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/size5"
+                    android:paddingTop="@dimen/size5"
+                    android:text="@string/next_order"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_text_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

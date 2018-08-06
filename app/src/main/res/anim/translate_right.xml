@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:fillEnabled="true">
+    <translate android:fromXDelta="0"
+        android:toXDelta="100%"
+        android:interpolator="@android:interpolator/accelerate_quint"
+        android:duration="50"
+        android:fillAfter="true"></translate>
+</set>

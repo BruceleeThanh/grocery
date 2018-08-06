@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/back_list"
+    android:orientation="horizontal"
+    android:weightSum="7">
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/tv_area_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size1"
+        android:layout_weight="2"
+        android:background="#fff"
+        android:ellipsize="marquee"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size12"
+        android:paddingRight="@dimen/size12"
+        android:singleLine="true"
+        android:text="@string/tb_Area"
+        android:textColor="@color/text_spiner"
+        android:textSize="@dimen/size_text_17" />
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/tv_building_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size1"
+        android:layout_weight="4"
+        android:background="#fff"
+        android:ellipsize="marquee"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size12"
+        android:paddingRight="@dimen/size12"
+        android:singleLine="true"
+        android:text="@string/tb_building"
+        android:textColor="@color/text_spiner"
+        android:textSize="@dimen/size_text_17" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size1"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:gravity="center">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/btn_delete_item_building_area"
+            android:layout_width="@dimen/size100"
+            android:layout_height="@dimen/size50"
+            android:background="@drawable/btn_no"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_17" />
+    </LinearLayout>
+</LinearLayout>

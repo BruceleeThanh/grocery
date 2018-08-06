@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/today_total">
+
+    <LinearLayout
+
+        android:gravity="center"
+        android:id="@+id/layoutBack"
+        android:layout_width="@dimen/size30"
+        android:layout_height="@dimen/size100"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/size5"
+        android:layout_marginLeft="@dimen/size5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:rotation="180"
+            android:src="@mipmap/icon_right_button" />
+
+        <com.grocery.common.CustomTextView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size5"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/colorBlackTrans30"
+            android:textSize="@dimen/size14" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/layoutBack"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingRight="@dimen/size10"
+        android:paddingTop="5dp">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_text_18" />
+
+        <ImageView
+            android:id="@+id/imClock"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/size10"
+            android:layout_toLeftOf="@id/tvTime"
+            android:src="@mipmap/icon_clock" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvCustomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_toLeftOf="@id/imClock"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:maxWidth="@dimen/size200"
+            android:singleLine="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_text_18" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imAvata"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/size10"
+            android:layout_toLeftOf="@+id/tvCustomName"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bakery" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/flatNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:text="@string/flat_no_1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_text_18" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvFlatNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toLeftOf="@+id/imAvata"
+            android:layout_toRightOf="@+id/flatNo"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_text_18" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutTitle"
+        android:layout_toRightOf="@+id/layoutBack"
+        android:paddingRight="@dimen/size10"
+        android:paddingTop="@dimen/size2"></FrameLayout>
+</RelativeLayout>

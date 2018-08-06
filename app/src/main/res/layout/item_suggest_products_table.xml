@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/back_tb"
+        android:orientation="horizontal"
+        android:padding="@dimen/size1">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_item_suggest_table_pro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/back_list"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="@dimen/size12"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingTop="@dimen/size12"
+            android:singleLine="true"
+            android:text="@string/product"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_16"
+            android:textStyle="bold" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_item_suggest_table_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/back_list"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="@dimen/size12"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingTop="@dimen/size12"
+            android:singleLine="true"
+            android:text="@string/brand"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_16"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

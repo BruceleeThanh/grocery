@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="@dimen/size50"
+        android:height="@dimen/size50"></size>
+    <gradient
+        android:angle="360"
+        android:centerX="50%"
+        android:centerY="50%"
+        android:type="radial"
+        android:gradientRadius="30%"
+        android:startColor="@color/color_login_1"
+        android:endColor="@color/bg_search_main" >
+    </gradient>
+    <corners android:radius="@dimen/size10"></corners>
+    <stroke android:color="#fff"
+        android:width="@dimen/size1"></stroke>
+</shape>

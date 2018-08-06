@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size80"
+    android:layout_marginRight="@dimen/size10"
+    android:background="@drawable/bg_list_frag">
+
+    <LinearLayout
+        android:id="@+id/layout_item_category_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size10">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_number_list_item_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|left"
+            android:text="1000"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_28"
+            android:textStyle="bold" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_text_list_item_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/orders"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_note_list_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_marginTop="@dimen/size5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_note_list_item_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:text="1000"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/size_text_12" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_expiring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:text="@string/expiring"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/size_text_12" />
+    </LinearLayout>
+</RelativeLayout>

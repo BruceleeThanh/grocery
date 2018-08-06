@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size15"
+    android:paddingRight="@dimen/size15"
+    android:paddingTop="@dimen/size5"
+    android:paddingBottom="@dimen/size5"
+    android:background="@drawable/radius_edt"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:src="@mipmap/icon_search_2" />
+
+    <com.grocery.common.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size10"
+        android:text="@string/search"
+        android:textColor="@color/colorApp"
+        android:textSize="@dimen/size_text_16" />
+</LinearLayout>

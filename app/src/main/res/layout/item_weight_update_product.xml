@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cb_dialog_update_pro"
+            android:layout_width="@dimen/size40"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_height="@dimen/size40"
+            android:background="@drawable/check_box_2"
+            android:padding="@dimen/size2"></ImageView>
+
+        <com.grocery.common.CustomTextView
+            android:layout_marginLeft="@dimen/size5"
+            android:layout_toRightOf="@+id/cb_dialog_update_pro"
+            android:id="@+id/tvCB_dialog_update_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="100 gm"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_18" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size10"
+        android:paddingTop="@dimen/size5">
+
+        <LinearLayout
+            android:id="@+id/rd_dialog_update_pro_default"
+            android:layout_width="@dimen/size30"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/customs_radio_btn"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:layout_toRightOf="@+id/rd_dialog_update_pro_default"
+            android:id="@+id/tvRD_dialog_update_pro_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:paddingLeft="@dimen/size10"
+            android:paddingTop="@dimen/size5"
+            android:text="@string/set_default"
+            android:textColor="#fff"
+            android:textSize="@dimen/size_text_14" />
+    </RelativeLayout>
+</LinearLayout>

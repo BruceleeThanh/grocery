@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:background="@color/back_list"
+    android:weightSum="12">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:padding="@dimen/size1"
+        android:background="#fff"
+        android:layout_margin="@dimen/size1"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/item_all_user_customer_name"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size10"
+        android:text="@string/Customer_name"
+        android:textColor="@color/text_spiner"
+        android:layout_marginBottom="@dimen/size1"
+        android:background="#fff"
+        android:textSize="@dimen/size_text_14" />
+
+    <com.grocery.common.CustomTextView
+        android:layout_marginBottom="@dimen/size1"
+        android:background="#fff"
+        android:id="@+id/item_all_user_flat_no"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size10"
+        android:text="@string/falt_no"
+        android:textColor="@color/text_spiner"
+        android:textSize="@dimen/size_text_14" />
+
+    <com.grocery.common.CustomTextView
+        android:layout_marginBottom="@dimen/size1"
+        android:background="#fff"
+        android:id="@+id/item_all_user_building_name"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:paddingLeft="@dimen/size10"
+        android:text="@string/buildin_name"
+        android:textColor="@color/text_spiner"
+        android:textSize="@dimen/size_text_14" />
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/size1"
+        android:background="#fff"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:paddingLeft="@dimen/size10"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <com.grocery.common.CustomTextView
+            android:id="@+id/item_all_user_AED"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="@string/AED"
+            android:textColor="@color/color_Mon"
+            android:textSize="@dimen/size_text_14" />
+        <LinearLayout
+            android:id="@+id/btn_item_all_user_view"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/size15"
+            android:layout_marginTop="@dimen/size15">
+            <include
+                layout="@layout/button_view"></include>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

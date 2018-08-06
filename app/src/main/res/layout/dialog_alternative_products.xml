@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_dialog"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/size30"
+        android:layout_weight="7"
+        android:id="@+id/layoutMain"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/size20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size80"
+            android:background="@drawable/radius_edt">
+
+            <com.grocery.common.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size10"
+                android:text="@string/search_other"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_22" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size15"
+                android:layout_weight="6"
+                android:background="@drawable/radius_edt">
+
+                <com.grocery.common.CustomEditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:imeOptions="actionDone"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:hint="@string/search_product"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingRight="@dimen/size10"
+                    android:singleLine="true"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_19" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/size18"
+                android:layout_weight="1"
+                android:background="@drawable/btn_yes"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/size30"
+                    android:layout_height="@dimen/size30"
+                    android:src="@mipmap/icon_search" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutHide"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"></RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="@dimen/size10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.grocery.common.CRecyclerView
+                    android:id="@+id/listAlternavite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size20"
+                android:layout_weight="1"
+                android:gravity="right|center">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="@dimen/size120"
+                    android:layout_height="@dimen/size50"
+                    android:background="@drawable/btn_no"
+                    android:gravity="center"
+                    android:text="@string/canceled"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_text_22" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_weight="1"
+                android:gravity="left|center">
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tvChoose"
+                    android:enabled="false"
+                    android:layout_width="@dimen/size120"
+                    android:layout_height="@dimen/size50"
+                    android:background="@drawable/radius_list"
+                    android:gravity="center"
+                    android:text="@string/choose"
+                    android:textColor="@color/text_save"
+                    android:textSize="@dimen/size_text_22" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

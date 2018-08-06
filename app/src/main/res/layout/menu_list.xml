@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size1"
+        android:background="@color/color_bg_EF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/size10"
+        android:paddingTop="@dimen/size10">
+
+        <ImageView
+            android:id="@+id/imMenu2"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="@dimen/size10"
+            android:src="@mipmap/icon_menu_1" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tv_name_item_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/size10"
+            android:text="@string/dashbroad"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_21" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <com.grocery.common.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size5"
+                android:text="@string/closeShop"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_22" />
+
+            <com.grocery.common.SwitchView
+                android:id="@+id/switch_closeShop"
+                android:layout_width="@dimen/size50"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size20"
+                app:checked="true"
+                app:color_on="@color/colorApp" />
+
+            <LinearLayout
+                android:id="@+id/layout_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/im_home"
+                    android:layout_width="@dimen/size42"
+                    android:layout_height="@dimen/size42"
+                    android:paddingRight="@dimen/size5"
+                    android:src="@mipmap/icon_home" />
+
+                <com.grocery.common.CustomTextView
+                    android:id="@+id/tv_home_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/size20"
+                    android:gravity="left|center"
+                    android:text="@string/home"
+                    android:textColor="@color/text_spiner"
+                    android:textSize="@dimen/size_text_21" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewclock"
+                android:layout_width="@dimen/size35"
+                android:layout_height="@dimen/size35"
+                android:layout_marginRight="@dimen/size5"
+                android:src="@mipmap/icon_clock" />
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tv_main_time_view_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size15"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_21" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/add_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

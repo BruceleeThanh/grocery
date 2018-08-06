@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_selected="true">
+        <inset
+            android:drawable="@drawable/customs_radio_btn_2"></inset>
+    </item>
+    <item
+        android:state_selected="false">
+        <inset
+            android:drawable="@drawable/customs_radio_btn_3"></inset>
+    </item>
+</selector>

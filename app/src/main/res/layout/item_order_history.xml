@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/back_list"
+    android:orientation="vertical"
+    android:paddingBottom="1dp">
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:weightSum="14">
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size11"
+            android:singleLine="true"
+            android:text="@string/order_Id"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextviewBold
+            android:id="@+id/tvFlat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingBottom="@dimen/size3"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="@string/flat_no"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvBuilding"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size14"
+            android:singleLine="true"
+            android:textColor="@color/text_spiner"
+            android:textSize="@dimen/size_text_17" />
+
+        <com.grocery.common.CustomTextView
+            android:id="@+id/tvDeleviryTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:gravity="center|left"
+            android:paddingLeft="@dimen/size13"
+            android:singleLine="true"
+            android:text="@string/delived_time"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/size_text_17" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/size3"
+            android:paddingLeft="@dimen/size10">
+
+            <com.grocery.common.CustomTextviewBold
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:singleLine="true"
+                android:text="@string/aed"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_17" />
+
+            <com.grocery.common.CustomTextviewBold
+                android:id="@+id/tvAed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size5"
+                android:singleLine="true"
+                android:textColor="@color/text_spiner"
+                android:textSize="@dimen/size_text_17" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:weightSum="2.5">
+
+            <com.grocery.common.CustomTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6"
+                android:ellipsize="marquee"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/size13"
+                android:textColor="@color/text_spiner"
+                android:lines="3"
+                android:textSize="@dimen/size_text_17"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/btnView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/size10"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size10">
+
+                <include layout="@layout/button_view"></include>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

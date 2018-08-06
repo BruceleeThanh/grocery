@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/size20"
+    android:background="@color/back_list">
+
+    <com.grocery.common.CustomTextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/checkBox"
+        android:ellipsize="marquee"
+        android:gravity="center|left"
+        android:paddingTop="@dimen/size15"
+        android:singleLine="true"
+        android:text="@string/email_invalid"
+        android:textColor="@color/colorApp"
+        android:textSize="@dimen/size_text_18" />
+
+    <ImageView
+        android:id="@+id/img_delete_product"
+        android:layout_width="@dimen/size35"
+        android:layout_height="@dimen/size35"
+        android:layout_toEndOf="@+id/tv_product_name"
+        android:src="@mipmap/icon_close" />
+</RelativeLayout>
